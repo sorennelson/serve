@@ -12,6 +12,9 @@ UBUNTU_VERSION="ubuntu:20.04"
 USE_LOCAL_SERVE_FOLDER=false
 BUILD_WITH_IPEX=false
 
+mkdir model_store
+cp ../../model_store/*.mar ./model_store/
+
 for arg in "$@"
 do
     case $arg in
