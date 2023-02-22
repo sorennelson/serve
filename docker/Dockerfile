@@ -115,4 +115,4 @@ WORKDIR /home/model-server
 ENV TEMP=/home/model-server/tmp
 ENTRYPOINT ["/usr/local/bin/dockerd-entrypoint.sh"]
 CMD ["serve"]
-CMD ["torchserve", "--start", "--model-store model-store", "--models", "book=book.mar"]
+CMD ["torchserve", "--start", "--model-store model-store", "--models", "movie=movie.mar", "book=book.mar"]
