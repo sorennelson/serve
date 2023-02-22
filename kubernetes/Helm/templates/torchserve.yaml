@@ -46,7 +46,7 @@ spec:
       containers:
       - name: torchserve
         image: {{ .Values.torchserve_image }}
-        args: ["torchserve", "--start",  "--model-store", "/home/model-server/shared/model-store/", "--ts-config", "/home/model-server/shared/config/config.properties"]
+        args: ["torchserve", "--start",  "--model-store", "/home/model-server/shared/model-store/", "--ts-config", "/home/model-server/shared/config/config.properties", "--models", "movie=movie.mar"]
         ports:
         - name: ts
           containerPort: {{ .Values.torchserve.inference_port }}
